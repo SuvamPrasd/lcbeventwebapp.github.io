@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "lcb-event-app"
+    "default": "lcb-event-app",
+    "staging": "lcb-event-app"
   }
 }
