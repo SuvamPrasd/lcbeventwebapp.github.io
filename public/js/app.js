@@ -45,24 +45,15 @@ var firebaseConfig = {
     const auth = firebase.auth();
 
     auth.signInWithEmailAndPassword(email, pass).catch(function(error) {
-          errorMessage(error.message);
+          modalDisplay(['Login failed \u{1F631}',error.message]);
       });
+      // modalDisplay(['Login successfully \u{1F604}','Now you can join the event']);
   });
 
-
-  //error modal message
-  function errorMessage(error){
-    modalTitle.textContent = 'Login failed \u{1F631}'; 
-    modalMessage.textContent = `${error}`;
-    modal.style.display = 'block';       
-    modal.classList.add('fadeStart');
-  }
-
-
-  //successfully login message
-  function successfullyLogin() { 
-    modalTitle.textContent = 'Login successfully \u{1F604}'; 
-    modalMessage.textContent = 'Now you can join the event';
+  //modal display message
+  function modalDisplay(msg) { 
+    modalTitle.textContent = msg[0]; 
+    modalMessage.textContent = msg[1];
     modal.style.display = 'block';       
     modal.classList.add('fadeStart');
   }
@@ -80,7 +71,7 @@ var firebaseConfig = {
     if(pass.toString().length >= 8){
     const auth = firebase.auth();
     auth.createUserWithEmailAndPassword(email,pass).catch((error)=>{
-        console.log(error.message);
+        modalDisplay([error.message, 'Try different account']);
     });
 }else{
     alert('password should contain minimum 8 characters');
@@ -177,7 +168,6 @@ var firebaseConfig = {
       if(user){
         guest.textContent = `${user.email}`;
         beforeLogout();
-        successfullyLogin();
         console.log('logged in');
       }else{
     afterLogout();
