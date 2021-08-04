@@ -15,14 +15,18 @@ var firebaseConfig = {
 
   const submitBtn = document.querySelector('#submitBtn');
   const forms = document.querySelector('form');
+  const myModal = document.getElementById("exampleModal");
 
   forms.addEventListener('submit', function(e){
+    submitBtn.setAttribute("data-toggle", "modal");
+      submitBtn.setAttribute("data-target", "#exampleModal");
     e.preventDefault();
     db.collection("contact").add({
       guestEmail: forms[0].value,
       guestMessage: forms[1].value 
     }).then(function(docRef){
       console.log("Document written with ID: ", docRef.id, docRef);
+      forms.reset();
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);

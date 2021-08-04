@@ -57,6 +57,10 @@ body{
     }
 }
 
+.modal-header, .modal-footer{
+    border: none;
+}
+
 .navbar-nav{
     border-top: 1px solid #d4d4d4;
     border-bottom: 1px solid #d4d4d4;
