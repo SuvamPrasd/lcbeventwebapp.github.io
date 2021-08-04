@@ -16,6 +16,13 @@ var firebaseConfig = {
   const submitBtn = document.querySelector('#submitBtn');
   const forms = document.querySelector('form');
   const myModal = document.getElementById("exampleModal");
+  const modal = document.getElementById("myModal");
+  const close = document.getElementsByClassName("close")[0];
+
+  close.onclick = () => {
+    modal.style.display = "none";
+    }
+  
 
   forms.addEventListener('submit', function(e){
     submitBtn.setAttribute("data-toggle", "modal");
@@ -26,6 +33,7 @@ var firebaseConfig = {
       guestMessage: forms[1].value 
     }).then(function(docRef){
       console.log("Document written with ID: ", docRef.id, docRef);
+      modal.style.display = "block";
       forms.reset();
     })
     .catch(function(error) {
