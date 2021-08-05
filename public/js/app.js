@@ -18,6 +18,7 @@ var firebaseConfig = {
   //getting all the elements
   const circle = document.querySelector('.dot');
   const guest = document.querySelector('.guest');
+  const register = document.querySelector('.register');
   const logout = document.querySelector('.logout');
   const signup = document.querySelector('.signup');
   const login = document.querySelector('.login');
@@ -155,6 +156,7 @@ var firebaseConfig = {
   function beforeLogout(){
     circle.style.backgroundColor = '#2fff24';
     form.style.display = 'none';
+    register.style.display = 'none';
     logout.style.display = 'block';
     form.style.display = 'none';
     note.style.display = 'none';

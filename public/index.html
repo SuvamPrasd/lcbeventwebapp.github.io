@@ -15,8 +15,8 @@
 <body>
 
     <!--navbar start--> 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div><span class="dot"></span><p class="text-light guest" style="display: inline; margin-left: 0.8em;">Guest</p></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top p-3">
+        <div><span class="dot"></span><p class="text-dark guest" style="display: inline; margin-left: 0.8em;">Guest</p></div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,8 +26,59 @@
             <a class="nav-item nav-link nav-hover" href="./pages/about.html">about us</a>
             <a class="nav-item nav-link nav-hover" href="./pages/contact.html">contact</a>
           </div>
+          <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-primary register" type="button" data-toggle="modal" data-target="#exampleModal">Register</button>
+            <button class="btn btn-danger logout" type="button">Logout</button>
+          </form>
         </div>
       </nav>
+
+      <!--Login Modal-->
+      <div class="modal form-modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="model-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+              <!-- <div class="row" style="margin-top: 2rem;"> -->
+                <!-- <div class="col-12"> -->
+                  <form class="user-form">
+                      <div class="form-group row">
+                        <div class="col-sm-12">
+                          <input type="email" class="form-control" id="inputEmail" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required >
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-sm-12">
+                          <input type="password" class="form-control" id="inputPassword" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                          title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required >
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                          <div class="col-lg-6">
+                              <button class="btn btn-success signup" type="button" data-dismiss="modal">sign up</button> 
+                          </div>
+                          <div class="col-lg-6">
+                              <button class="btn btn-primary login" type="button" data-dismiss="modal">login</button>
+                          </div>
+                      </div>
+                    </form>
+                    <div class="modal-footer">
+                      
+                    </div>
+                <!-- </div> -->
+            <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+
       <!--navbar end-->
       <!--main container -->
       <div class="container">
@@ -53,12 +104,12 @@
                           <table class="table">
                               <tbody>
                                   <tr>
-                                      <td>Date: 05/06/2020</td>
-                                      <td>Venue: LCB Conference room</td>
+                                      <td><span>Date:</span> 05/06/2020</td>
+                                      <td><span>Venue:</span> LCB Conference room</td>
                                   </tr>
                                   <tr>
-                                      <td>Time: 12:01 PM</td>
-                                      <td>Contact: XXXXXXXXXX</td>
+                                      <td><span>Time:</span> 12:01 PM</td>
+                                      <td><span>Contact:</span> XXXXXXXXXX</td>
                                   </tr>
                               </tbody>
                           </table>
@@ -123,14 +174,8 @@
               </div>
               <!--main second col-->
               <div class="col-lg-4 col-md-6 col-sm-12">
-                  <!--logout row-->
-                  <div class="row" style="margin-top: 2rem;">
-                      <div class="col-12">
-                          <button class="btn btn-danger btn-md logout" type="button">Logout</button>
-                      </div>
-                  </div>
                   <!--signin/signup row-->
-                  <div class="row" style="margin-top: 2rem;">
+                  <!-- <div class="row" style="margin-top: 2rem;">
                       <div class="col-12">
                         <form class="user-form">
                             <div class="form-group row">
@@ -154,7 +199,7 @@
                             </div>
                           </form>
                       </div>
-                  </div>
+                  </div> -->
                   <!--Attendee row-->
                   <div class="row" style="margin-top: 2rem;">
                       <div class="col-12">

@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-image: url('https://images.pexels.com/photos/316466/pexels-photo-316466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-position: center center;
     background-repeat: no-repeat;
@@ -39,8 +39,6 @@ body{
 
 
 .navbar-nav{
-    border-top: 1px solid #d4d4d4;
-    border-bottom: 1px solid #d4d4d4;
     margin: 0 auto;
 }
 

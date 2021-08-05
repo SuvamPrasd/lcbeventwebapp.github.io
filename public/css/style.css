@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 body{
-    font-family: 'Montserrat', sans-serif;
-    /* background-image: url('https://images.pexels.com/photos/316466/pexels-photo-316466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); */
+    font-family: 'Poppins', sans-serif;
+    /* background-image: url('https://images.pexels.com/photos/316466/pexels-photo-316466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-image: url('../assests/newwallpaper.png');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 
@@ -42,9 +42,11 @@ body{
     }
 }
 
+.form-modal .modal-content{
+    border: none;
+}
+
 .navbar-nav{
-    border-top: 1px solid #d4d4d4;
-    border-bottom: 1px solid #d4d4d4;
     margin: 0 auto;
 }
 
@@ -57,20 +59,24 @@ body{
     background-color: black !important;
 }
 
+.container{
+    margin-top: 5rem;
+}
+
 .dot{
     height: 25px;
     width: 25px;
     background-color: rgb(255, 70, 70);
     border-radius: 50%;
     display: inline-block;
-    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.85);
+    /* box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.85); */
 }
 
 .img-css{
     max-width: 100%;
     height: auto;
     /* transition: transform .2s; */
-    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 10px 20px rgb(241, 241, 241);
     border-radius: 10px;
     z-index: 2;
 }
@@ -132,6 +138,10 @@ body{
     padding: .75rem;
     vertical-align: top;
     border-top:  none;
+}
+
+.table span{
+    font-weight: bold;
 }
 
 .event-para{
@@ -208,12 +218,12 @@ input::placeholder{
 
 }
 
-form{
+.user-form{
     padding: 3rem;
-    box-shadow: 0px 10px 4px rgb(199, 199, 199);
+    /* box-shadow: 0px 10px 20px rgb(241, 241, 241); */
     background-color: white;
     border-radius: 20px;
-    border: 1px solid rgb(199, 199, 199);
+    /* border: 1px solid rgb(199, 199, 199); */
 }
 
 #button {
