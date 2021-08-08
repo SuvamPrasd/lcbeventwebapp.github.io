@@ -16,6 +16,7 @@ var firebaseConfig = {
 
 
   //getting all the elements
+  const body = document.querySelector("body");
   const circle = document.querySelector('.dot');
   const guest = document.querySelector('.guest');
   const register = document.querySelector('.register');
@@ -38,6 +39,25 @@ var firebaseConfig = {
   const modalTitle = document.querySelector('.modal-title');
   let d = new Date();
 
+  
+
+  //modal display message
+  function modalDisplay(msg) { 
+    alert(msg[1]);
+    // modalTitle.textContent = msg[0]; 
+    // modalMessage.textContent = msg[1];
+    // modal.style.display = 'block';       
+    // modal.classList.add('fadeStart');
+  }
+
+  // function closeModal(){
+  //   // body.removeAttribute('modal-open');
+  //   // modal.style.display = 'none';       
+  //   // modal.classList.remove('fadeStart');
+  // }
+
+
+
   //login user
   login.addEventListener('click', (e)=>{
     let email = txtEmail.value;
@@ -48,21 +68,11 @@ var firebaseConfig = {
     auth.signInWithEmailAndPassword(email, pass).catch(function(error) {
           modalDisplay(['Login failed \u{1F631}',error.message]);
       });
+      // closeModal();
       // modalDisplay(['Login successfully \u{1F604}','Now you can join the event']);
   });
 
-  //modal display message
-  function modalDisplay(msg) { 
-    modalTitle.textContent = msg[0]; 
-    modalMessage.textContent = msg[1];
-    modal.style.display = 'block';       
-    modal.classList.add('fadeStart');
-  }
 
-  function closeModal(){
-    modal.style.display = 'none';       
-    modal.classList.remove('fadeStart');
-  }
 
   //signup user
   signup.addEventListener('click', ()=>{
@@ -77,6 +87,8 @@ var firebaseConfig = {
 }else{
     alert('password should contain minimum 8 characters');
 }
+
+// closeModal();
     
   });
 
@@ -133,7 +145,7 @@ var firebaseConfig = {
     });
     //clear the inputs fields
     fillupForm.style.display = 'none';
-    btnNo.disabled = 'true';
+    btnNo.disabled = 'false';
     btnYes.disabled = 'true';
     return false;
   })
@@ -147,6 +159,7 @@ var firebaseConfig = {
     guest.textContent = 'Guest';
     logout.style.display = 'none';
     attend.style.display = 'none';
+    register.style.display = 'block';
     form.style.display = 'block';
     note.style.display = 'block';
     fillupForm.style.display = 'none';

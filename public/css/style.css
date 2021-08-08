@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     /* background-image: url('https://images.pexels.com/photos/316466/pexels-photo-316466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-image: url('../assests/newwallpaper.png');
     background-position: center center;
@@ -15,14 +15,8 @@ body{
     background-size: cover; */
 
 @media only screen and (max-width: 991px){
-    .navbar{
-        display: none;
-    }
     footer{
         display: none;
-    }
-    #pagination{
-        display: block;
     }
 }
 
@@ -115,21 +109,13 @@ body{
         }
     }
 
-    .signup:hover{
-        transform: scale(1.2);
-    }
-
-    .login:hover{
-        transform: scale(1.2);
-    }
-
 }
 .table{
-    margin-top: 2rem;
+    margin: 2rem 0;
     animation: fadeInAnimation 3s ease-in;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    -webkit-animation: fadeInAnimation 2s ease-in;
+    -webkit-animation: fadeInAnimation 500ms ease-in;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
 }   
@@ -145,13 +131,13 @@ body{
 }
 
 .event-para{
-    padding: 1.4em;
+    /* padding: 1.4em; */
     border: none;
     text-align: left;
     animation: fadeInAnimation 3s ease-in;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    -webkit-animation: fadeInAnimation 2s ease-in;
+    -webkit-animation: fadeInAnimation 500ms ease-in;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
 }
@@ -161,9 +147,16 @@ body{
     font-weight: bold;
 } 
 
-.btn{
+.modal-header{
+    border: none;
+}
+
+.btn-Yes{
+    margin-bottom: 1rem;
+}
+.btnYes, .btnNo{
     width: 100%;
-    border-radius: 50px;
+    /* border-radius: 50px; */
 }
 
 .googleSign{
@@ -185,29 +178,6 @@ body{
     color: black;
 }
 
-.signup{
-    -webkit-transition: transform 500ms;
-    transition: transform 500ms;
-}
-
-.login{
-    -webkit-transition: transform 500ms;
-    transition: transform 500ms;
-}
-
-
-input[type="email"], input[type="password"]{
-    background: white;
-    border: 1px solid rgb(199, 199, 199);
-    border-radius: 50px;
-    -webkit-transition: transform 300ms ease-in-out;
-    transition: transform 300ms ease-in-out;
-}
-
-input[type="email"]:focus, input[type="password"]:focus{
-    transform: scale(1.2);
-}
-
 
 input::placeholder{
     text-align: center;
@@ -219,11 +189,7 @@ input::placeholder{
 }
 
 .user-form{
-    padding: 3rem;
-    /* box-shadow: 0px 10px 20px rgb(241, 241, 241); */
-    background-color: white;
-    border-radius: 20px;
-    /* border: 1px solid rgb(199, 199, 199); */
+    padding: 1rem;
 }
 
 #button {
@@ -274,9 +240,6 @@ input::placeholder{
     }
 }
 
-.pagination{
-    display: none;
-}
 
 .fadeStart{
     opacity: 1;
