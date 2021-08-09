@@ -65,7 +65,9 @@ var firebaseConfig = {
 
     const auth = firebase.auth();
 
-    auth.signInWithEmailAndPassword(email, pass).catch(function(error) {
+    auth.signInWithEmailAndPassword(email, pass).then((userCredential) => {
+      console.log(userCredential.user);
+    }).catch(function(error) {
           modalDisplay(['Login failed \u{1F631}',error.message]);
       });
       // closeModal();
@@ -81,7 +83,9 @@ var firebaseConfig = {
     
     if(pass.toString().length >= 8){
     const auth = firebase.auth();
-    auth.createUserWithEmailAndPassword(email,pass).catch((error)=>{
+    auth.createUserWithEmailAndPassword(email,pass).then((userCredential) => {
+      console.log(userCredential);
+    }).catch((error)=>{
         modalDisplay([error.message, 'Try different account']);
     });
 }else{
@@ -139,6 +143,7 @@ var firebaseConfig = {
     })
     .then(function(docRef) {
       console.log("Document written with ID: ", docRef.id);
+      
     })
     .catch(function(error) {
       console.error("Error adding document: ", error);
@@ -147,6 +152,8 @@ var firebaseConfig = {
     fillupForm.style.display = 'none';
     btnNo.disabled = 'false';
     btnYes.disabled = 'true';
+    alert('You have successfully attended the event.');
+    location.reload();
     return false;
   })
 
