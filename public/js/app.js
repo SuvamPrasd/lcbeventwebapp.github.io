@@ -107,11 +107,13 @@ aboutImgRef.getDownloadURL().then((url) => {
 
     const auth = firebase.auth();
 
+
     auth.signInWithEmailAndPassword(email, pass).catch(function (error) {
       modalDisplay(['Login failed \u{1F631}', error.message]);
     });
     // closeModal();
     // modalDisplay(['Login successfully \u{1F604}','Now you can join the event']);
+
   });
 
 
@@ -120,7 +122,6 @@ aboutImgRef.getDownloadURL().then((url) => {
   signup.addEventListener('click', () => {
     let email = txtEmail.value;
     let pass = txtPass.value;
-    
     if (pass.toString().length >= 8) {
       const auth = firebase.auth();
       auth.createUserWithEmailAndPassword(email, pass).catch((error) => {
@@ -179,16 +180,20 @@ aboutImgRef.getDownloadURL().then((url) => {
       timestamp: Date.now(),
       userId: firebase.auth().currentUser.uid
     })
+
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
       })
       .catch(function (error) {
         console.error("Error adding document: ", error);
       });
+
     //clear the inputs fields
     fillupForm.style.display = 'none';
     btnNo.disabled = 'false';
     btnYes.disabled = 'true';
+    alert('You have successfully attended the event.');
+    location.reload();
     return false;
   })
 
