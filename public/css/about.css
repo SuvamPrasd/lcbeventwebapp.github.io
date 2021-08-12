@@ -2,7 +2,7 @@
 
 body{
     font-family: 'Inter', sans-serif;
-    background-image: url('https://images.pexels.com/photos/316466/pexels-photo-316466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    /* background-image: url('https://images.pexels.com/photos/316466/pexels-photo-316466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,7 +52,7 @@ body{
 }
 
 .about-img{
-    background-image: url('../assests/2.png');
+    /* background-image: url('../assests/2.png'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

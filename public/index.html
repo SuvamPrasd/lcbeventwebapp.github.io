@@ -7,6 +7,8 @@
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-storage.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
@@ -85,7 +87,9 @@
                   </div> 
                   <!--image row-->
                   <div class="row img-row">
-                      <div class="col-12"><img class="img-css" src="https://images.pexels.com/photos/325944/pexels-photo-325944.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="toronto image">
+                      <div class="col-12">
+                        <!-- <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> -->
+                        <img class="img-css" src="./assests/Pulse-1s-200px.gif" alt="toronto image">
                     </div>
                   </div>  
                   <!--table row-->
@@ -94,12 +98,12 @@
                           <table class="table">
                               <tbody>
                                   <tr>
-                                      <td><span>Date:</span> 05/06/2020</td>
-                                      <td><span>Venue:</span> LCB Conference room</td>
+                                      <td class="event-date"><span>Date:</span></td>
+                                      <td class="event-venue"><span>Venue:</span></td>
                                   </tr>
                                   <tr>
-                                      <td><span>Time:</span> 12:01 PM</td>
-                                      <td><span>Contact:</span> XXXXXXXXXX</td>
+                                      <td class="event-time"><span>Time:</span></td>
+                                      <td class="event-phone"><span>Contact:</span></td>
                                   </tr>
                               </tbody>
                           </table>
@@ -108,7 +112,7 @@
                   <!--event info-->
                   <div class="row">
                       <div class="col-12">
-                          <p class="event-para">This year we are organizing an event on behalf of environment day celebration. The event consists of various activities like essay writing, painting competition, and plantation. The winner of each activity will get exciting prizes worth rs.1000 and all the other participants will get a participation certificate authorizes by our college. For any further queries please contact us through email provided in the contact us page.</p>
+                          <p class="event-para"></p>
                       </div>
                   </div>
                   <!--NOTE-->
@@ -199,6 +203,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="./js/scroll.js"></script>
+      <!-- <script src="./js/admin.js"></script> -->
       <script src="./js/app.js"></script>
 </body>
 </html>
