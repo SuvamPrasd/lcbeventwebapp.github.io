@@ -12,10 +12,10 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  var db = firebase.firestore();
-
+var db = firebase.firestore();
+var storage = firebase.storage();
+var rdb = firebase.database();
   
-
 
   //getting all the elements
   const body = document.querySelector("body");
@@ -44,16 +44,14 @@ var firebaseConfig = {
   const eventDate = document.querySelector('.event-date');
   const eventTime = document.querySelector('.event-time');
   const eventVenue = document.querySelector('.event-venue');
-const eventPhone = document.querySelector('.event-phone');
-const eventImg = document.querySelector('.img-css');
-const aboutImg = document.querySelector('.about-img');
+  const eventPhone = document.querySelector('.event-phone');
+  const eventImg = document.querySelector('.img-css');
+  const aboutImg = document.querySelector('.about-img');
   let d = new Date();
-
   
 
-
   //admin Realtime Database & Storage
-var storageRef = firebase.storage().ref()
+var storageRef = storage.ref()
 var eventImgRef = storageRef.child('images/pexels-photo-325944.jpeg');
   var aboutImgRef = storageRef.child('images/classroom.png');
   eventImgRef.getDownloadURL().then((url) => {
@@ -69,7 +67,7 @@ aboutImgRef.getDownloadURL().then((url) => {
   console.log(error);
 });
 
-  var dbRefObject = firebase.database().ref().child('event');
+  var dbRefObject = rdb.ref().child('event');
   dbRefObject.once('value', (snapshot) => {
     const event = JSON.stringify(snapshot.val(), null, 3);
     const eventData = JSON.parse(event);
@@ -86,17 +84,7 @@ aboutImgRef.getDownloadURL().then((url) => {
   //modal display message
   function modalDisplay(msg) {
     alert(msg[1]);
-    // modalTitle.textContent = msg[0]; 
-    // modalMessage.textContent = msg[1];
-    // modal.style.display = 'block';       
-    // modal.classList.add('fadeStart');
   }
-
-  // function closeModal(){
-  //   // body.removeAttribute('modal-open');
-  //   // modal.style.display = 'none';       
-  //   // modal.classList.remove('fadeStart');
-  // }
 
 
 
@@ -104,16 +92,10 @@ aboutImgRef.getDownloadURL().then((url) => {
   login.addEventListener('click', (e) => {
     let email = txtEmail.value;
     let pass = txtPass.value;
-
     const auth = firebase.auth();
-
-
     auth.signInWithEmailAndPassword(email, pass).catch(function (error) {
       modalDisplay(['Login failed \u{1F631}', error.message]);
     });
-    // closeModal();
-    // modalDisplay(['Login successfully \u{1F604}','Now you can join the event']);
-
   });
 
 
@@ -130,9 +112,6 @@ aboutImgRef.getDownloadURL().then((url) => {
     } else {
       alert('password should contain minimum 8 characters');
     }
-
-    // closeModal();
-    
   });
 
 
