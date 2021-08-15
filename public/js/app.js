@@ -182,18 +182,18 @@ aboutImgRef.getDownloadURL().then((url) => {
   });
 
   function afterLogout() {
-    guest.textContent = 'Guest';
+    guest.textContent = '';
     logout.style.display = 'none';
     attend.style.display = 'none';
     register.style.display = 'block';
     form.style.display = 'block';
     note.style.display = 'block';
     fillupForm.style.display = 'none';
-    circle.style.backgroundColor = 'rgb(255, 70, 70)';
+    // circle.style.backgroundColor = 'rgb(255, 70, 70)';
   }
 
   function beforeLogout() {
-    circle.style.backgroundColor = '#2fff24';
+    // circle.style.backgroundColor = '#2fff24';
     form.style.display = 'none';
     register.style.display = 'none';
     logout.style.display = 'block';

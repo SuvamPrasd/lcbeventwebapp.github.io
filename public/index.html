@@ -18,7 +18,6 @@
 
     <!--navbar start--> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top p-3">
-        <div><span class="dot"></span><p class="text-dark guest" style="display: inline; margin-left: 0.8em;">Guest</p></div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,7 +28,7 @@
             <a class="nav-item nav-link nav-hover" href="./pages/contact.html">contact</a>
           </div>
           <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-outline-primary register" type="button" data-toggle="modal" data-target="#exampleModal">Login</button>
+            <a class="nav-item nav-link guest"></a>
             <button class="btn btn-danger logout" type="button">Logout</button>
           </form>
         </div>
@@ -69,16 +68,17 @@
       </div>
       
       <!--hero section-->
-      <section class="container hero">
+      <section class="container-fluid hero bg-light">
         <div class="row align-items-center">
           <div class="col-12 col-lg-6">           
                 <h1>
-                  Attend College Event Easily
+                  <span class="text-primary">Attend</span> College Event Easily
                 </h1>
-                <p>Start attending your college events easily and effortlessly. Explore upcoming your college events, seminars and workshops without hustling. Sign up to attend the event.</p>            
+                <p class="mt-4">Start attending your college events easily and effortlessly. Explore upcoming your college events, seminars and workshops without hustling. <span class="font-weight-bold">Sign up</span> to attend the event.</p>  
+                <button class="btn btn-outline-primary register" type="button" data-toggle="modal" data-target="#exampleModal">Login</button>         
               </div>
           <div class="col-12 col-lg-6">
-            <img src="https://images.unsplash.com/photo-1561489413-985b06da5bee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="img-fluid" alt="...">
+            <img src="https://images.unsplash.com/photo-1576085898323-218337e3e43c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" class="img-fluid rounded shadow-3" alt="...">
           </div>
         </div>
       </section>

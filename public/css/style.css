@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 :root{
-  --primary-color: #322C99;
+  --primary-color: #007bff;
   --shades-1: #000;
   --shades-2: #fff;
   --shades-3: #555;
@@ -10,6 +10,11 @@
 
 body{
     font-family: 'Inter', sans-serif;
+}
+
+.container-fluid{
+    padding: 4rem 8rem;
+    margin-bottom: 5rem;
 }
 
 @media only screen and (max-width: 991px){
@@ -51,9 +56,6 @@ body{
     background-color: black !important;
 }
 
-.container{
-    margin-top: 5rem;
-}
 
 .dot{
     height: 25px;
@@ -110,16 +112,15 @@ body{
 }
 
 /*hero-section*/
-.hero{
-  /* margin: 0; */
-}
-
+/* .hero{
+    background-color: var(--primary-color);
+} */
 .hero h1{
   font-size: 4.3rem;
   font-weight: bold;
   letter-spacing: -.2rem;
+  line-height: 1;
 }
-
 .hero p{
   color: var(--shades-3);
 }
