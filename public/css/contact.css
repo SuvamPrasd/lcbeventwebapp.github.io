@@ -61,9 +61,6 @@ body{
     border: none;
 }
 
-.navbar-nav{
-    margin: 0 auto;
-}
 
 .bg-dark{
     transition: background-color 500ms;

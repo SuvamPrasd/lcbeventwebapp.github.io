@@ -16,23 +16,33 @@
 </head>
 <body>
 
-    <!--navbar start--> 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top p-3">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active nav-hover" href="#">home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link nav-hover" href="./pages/about.html">about us</a>
-            <a class="nav-item nav-link nav-hover" href="./pages/contact.html">contact</a>
-          </div>
-          <form class="form-inline my-2 my-lg-0">
-            <a class="nav-item nav-link guest"></a>
-            <button class="btn btn-danger logout" type="button">Logout</button>
-          </form>
-        </div>
-      </nav>
+
+  <!--navbar start--> 
+  <nav class="navbar px-5 py-3 navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">SEvent</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-item nav-link active nav-hover" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link nav-hover" href="./pages/about.html">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link nav-hover" href="./pages/contact.html">Contact</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a class="nav-item nav-link guest"></a>
+            <button class="btn btn-outline-danger logout" type="button">Logout</button>
+      </form>
+    </div>
+  </nav>
+          <!--navbar end-->
 
       <!--Login Modal-->
       <div class="modal form-modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -75,15 +85,43 @@
                   <span class="text-primary">Attend</span> College Event Easily
                 </h1>
                 <p class="mt-4">Start attending your college events easily and effortlessly. Explore upcoming your college events, seminars and workshops without hustling. <span class="font-weight-bold">Sign up</span> to attend the event.</p>  
-                <button class="btn btn-outline-primary register" type="button" data-toggle="modal" data-target="#exampleModal">Login</button>         
+                <button class="btn btn-primary register" type="button" data-toggle="modal" data-target="#exampleModal">Login</button>         
               </div>
           <div class="col-12 col-lg-6">
-            <img src="https://images.unsplash.com/photo-1576085898323-218337e3e43c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" class="img-fluid rounded shadow-3" alt="...">
+            <img src="https://images.unsplash.com/photo-1576085898323-218337e3e43c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" class="img-fluid rounded shadow-3 hero-img" alt="...">
           </div>
         </div>
       </section>
 
-      <!--navbar end-->
+
+      <!--Features start-->
+      <div class="container mb-5">
+        <div class="card-deck">
+          <div class="card card-shadow">
+            <img src="https://images.unsplash.com/photo-1565598621680-94ac0c22b148?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="girls attending events">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Attend Easily</h5>
+              <p class="card-text">Attend the college event with an ease. No need to call your college event organizer or admin to query about how to attend the event.</p>
+            </div>
+          </div>
+          <div class="card card-shadow">
+            <img src="https://images.unsplash.com/photo-1479920252409-6e3d8e8d4866?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="registration">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Registration in 3 mins</h5>
+              <p class="card-text">Registering in the event takes almost less than 3 mins to complete. No more big form to fill-up.</p>
+            </div>
+          </div>
+          <div class="card card-shadow">
+            <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="contact">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Stay informed</h5>
+              <p class="card-text">Still don't have enough information or details about the event, contact the event organizer via contact us feature.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Features end-->
+
       <!--main container -->
       <div class="container">
           <!--main row-->

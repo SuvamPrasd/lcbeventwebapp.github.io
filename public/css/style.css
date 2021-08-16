@@ -17,35 +17,14 @@ body{
     margin-bottom: 5rem;
 }
 
-@media only screen and (max-width: 991px){
-    footer{
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 992px){
-    footer{
-        display: block;
-        bottom: 0;
-        background-color: black;
-        text-align: center;
-        color: wheat;
-        margin-top: 2rem;
-        padding: .1em;
-    }
-    #pagination{
-        display: none;
-        opacity: 0;
-    }
-}
 
 .form-modal .modal-content{
     border: none;
 }
 
-.navbar-nav{
+/* .navbar-nav{
     margin: 0 auto;
-}
+} */
 
 .bg-dark{
     transition: background-color 500ms;
@@ -75,42 +54,6 @@ body{
     z-index: 2;
 }
 
-@media only screen and (min-width: 992px){
-    /* .img-css:hover{
-        transform: rotate(-10deg);
-        -webkit-transform: rotate(-10deg);
-    }  */
-
-    #pagination{
-        display: flex;
-    }
-
-    @keyframes fadeInAnimation {
-        0%{
-            transform: translateX(100px);
-            -webkit-transform: translateX(100px);
-            opacity: 0;
-
-        }
-        100%{
-            opacity: 1;
-        }
-    }
-
-    @keyframes modalAnimation {
-        0%{
-            transform: scale(1.5);
-            -webkit-transform: scale(1.5);
-            opacity: 0;
-
-        }
-        100%{
-            opacity: 1;
-        }
-    }
-
-}
-
 /*hero-section*/
 /* .hero{
     background-color: var(--primary-color);
@@ -125,6 +68,19 @@ body{
   color: var(--shades-3);
 }
 
+
+/*features*/
+.card{
+    border: none;
+    transition: all .2s ease-in-out;
+}
+.card-shadow{
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.082);
+}
+.card:hover{
+    background-color: var(--primary-color);
+    color: var(--shades-2);
+}
 
 .table{
     margin: 2rem 0;
@@ -271,3 +227,67 @@ input::placeholder{
 
 
 /*helper classes*/
+
+
+
+/*media query*/
+@media only screen and (min-width: 320px) and (max-width: 991px){
+    .container-fluid{
+        padding: 1rem;
+    }
+    .hero h1{
+        font-size: 2.3rem;
+      }
+      .register{
+          margin-bottom: 1rem;
+      }
+      .hero-img{
+          display: none;
+      }
+    footer{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    footer{
+        display: block;
+        bottom: 0;
+        background-color: black;
+        text-align: center;
+        color: wheat;
+        margin-top: 2rem;
+        padding: .1em;
+    }
+    #pagination{
+        display: none;
+        opacity: 0;
+    }
+    #pagination{
+        display: flex;
+    }
+
+    @keyframes fadeInAnimation {
+        0%{
+            transform: translateX(100px);
+            -webkit-transform: translateX(100px);
+            opacity: 0;
+
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    @keyframes modalAnimation {
+        0%{
+            transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            opacity: 0;
+
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}
