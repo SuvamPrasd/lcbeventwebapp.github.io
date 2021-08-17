@@ -47,6 +47,12 @@ var rdb = firebase.database();
   const eventPhone = document.querySelector('.event-phone');
   const eventImg = document.querySelector('.img-css');
   const aboutImg = document.querySelector('.about-img');
+  //attendee fields
+  const atd = document.querySelector('.atd');
+  const atdName = document.querySelector('.atd-name');
+  const atdClg = document.querySelector('.atd-college');
+  const atdPhn = document.querySelector('.atd-phone');
+  const atdMsg = document.querySelector('.atd-message');
   let d = new Date();
   
 
@@ -78,6 +84,25 @@ aboutImgRef.getDownloadURL().then((url) => {
     eventPhone.innerHTML = `<b>Phone: </b>` + eventData.phone;
   });
 
+
+  //event attendee data
+  function attendeeData(){
+    db.collection("guestbook").doc(firebase.auth().currentUser.uid)
+    .onSnapshot((doc) => {
+        var source = doc.metadata.hasPendingWrites ? "Local" : "Server";
+        let objectToJSON = JSON.stringify(doc.data(), null, 2);
+        let atdData = JSON.parse(objectToJSON);
+        atdName.textContent = `${atdData.name}`;
+        atdClg.textContent = `${atdData.college}`;
+        atdPhn.textContent = `${atdData.phone}`;
+        atd.style.display = 'block';
+        if(atdData.text == undefined){
+          atdMsg.textContent = `${atdData.text}`;
+        }else{
+          atdMsg.textContent = 'No Message';
+        }
+    });
+  }
 
 
 
@@ -137,6 +162,12 @@ aboutImgRef.getDownloadURL().then((url) => {
       .catch(function (error) {
         console.error("Error adding document: ", error);
       });
+      db.collection("guestbook").doc(firebase.auth().currentUser.uid).delete().then(() => {
+        console.log("Document successfully deleted!");
+    }).catch((error) => {
+        console.error("Error removing document: ", error);
+    });
+    // location.reload();
   });
 
 
@@ -151,7 +182,7 @@ aboutImgRef.getDownloadURL().then((url) => {
     //prevent redirect 
     e.preventDefault();
     //add the message
-    db.collection('guestbook').add({
+    db.collection('guestbook').doc(firebase.auth().currentUser.uid).set({
       name: fillupForm['fullname'].value,
       phone: fillupForm['phone'].value,
       college: fillupForm['college'].value,
@@ -208,6 +239,7 @@ aboutImgRef.getDownloadURL().then((url) => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       guest.textContent = `${user.email}`;
+      attendeeData();
       beforeLogout();
       console.log('logged in');
     } else {
