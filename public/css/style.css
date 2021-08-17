@@ -182,7 +182,7 @@ input::placeholder{
 }
 
 #button::after {
-    content: "\f077";
+    content: "\005E";
     font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
