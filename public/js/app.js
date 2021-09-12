@@ -89,8 +89,9 @@ aboutImgRef.getDownloadURL().then((url) => {
   function attendeeData(){
     db.collection("guestbook").doc(firebase.auth().currentUser.uid)
     .onSnapshot((doc) => {
-        var source = doc.metadata.hasPendingWrites ? "Local" : "Server";
-        let objectToJSON = JSON.stringify(doc.data(), null, 2);
+      //conditions to show the ticket details
+      var source = doc.metadata.hasPendingWrites ? "Local" : "Server";
+        let objectToJSON = JSON.stringify(doc.data(), null, 2);           
         let atdData = JSON.parse(objectToJSON);
         atdName.textContent = `${atdData.name}`;
         atdClg.textContent = `${atdData.college}`;
@@ -100,7 +101,7 @@ aboutImgRef.getDownloadURL().then((url) => {
           atdMsg.textContent = `${atdData.text}`;
         }else{
           atdMsg.textContent = 'No Message';
-        }
+        }    
     });
   }
 
@@ -167,7 +168,7 @@ aboutImgRef.getDownloadURL().then((url) => {
     }).catch((error) => {
         console.error("Error removing document: ", error);
     });
-    // location.reload();
+    location.reload();
   });
 
 
