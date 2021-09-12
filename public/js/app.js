@@ -82,7 +82,7 @@ aboutImgRef.getDownloadURL().then((url) => {
     eventTime.innerHTML = `<b>Time: </b>` + eventData.time;
     eventVenue.innerHTML = `<b>Venue: </b>` + eventData.venue;
     eventPhone.innerHTML = `<b>Phone: </b>` + eventData.phone;
-  });
+   });
 
 
   //event attendee data
