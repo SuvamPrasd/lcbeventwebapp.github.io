@@ -101,7 +101,7 @@ aboutImgRef.getDownloadURL().then((url) => {
           atdMsg.textContent = `${atdData.text}`;
         }else{
           atdMsg.textContent = 'No Message';
-        }    
+        }   
     });
   }
 
@@ -165,10 +165,10 @@ aboutImgRef.getDownloadURL().then((url) => {
       });
       db.collection("guestbook").doc(firebase.auth().currentUser.uid).delete().then(() => {
         console.log("Document successfully deleted!");
+        location.reload();
     }).catch((error) => {
         console.error("Error removing document: ", error);
     });
-    location.reload();
   });
 
 
